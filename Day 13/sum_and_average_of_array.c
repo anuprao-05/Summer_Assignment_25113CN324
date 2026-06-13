@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float sum = 0, average;
+
+    printf("Enter number of elements : ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements :\n", n);
+    for (i = 0; i < n; i++) {
+        printf("Element[%d] : ", i);
+        scanf("%d", &arr[i]);
+    }
+
+    for (i = 0; i < n; i++)
+        sum = sum + arr[i];
+
+    average = sum / n;
+
+    printf("\nArray elements are : ");
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    printf("\nSum     = %.0f\n", sum);
+    printf("Average = %.2f\n",  average);
+
+    return 0;
+}
